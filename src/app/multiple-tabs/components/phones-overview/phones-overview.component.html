@@ -1,0 +1,8 @@
+<div class="container">
+  <app-phones-table *ngIf="phones"
+                    [phones]="phones">
+  </app-phones-table>
+  <div class="spinner" *ngIf="!phones">
+    <mat-spinner></mat-spinner>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+.container {
+  display: block;
+  padding: 3rem 1rem;
+
+  .spinner {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}

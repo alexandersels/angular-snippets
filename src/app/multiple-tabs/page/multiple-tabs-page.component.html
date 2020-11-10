@@ -1,0 +1,32 @@
+<div class="container">
+  <h3>Multiple Tabs Example</h3>
+  <mat-tab-group animationDuration="0ms">
+    <mat-tab label="Users">
+      <ng-template matTabContent>
+        <app-users-overview
+          [users]="users$ | async"
+          (initialised)="onUsersInitialised()"
+          (destroyed)="onUsersDestroyed()">
+        </app-users-overview>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Groups">
+      <ng-template matTabContent>
+        <app-groups-overview
+          [groups]="groups$ | async"
+          (initialised)="onGroupsInitialised()"
+          (destroyed)="onGroupsDestroyed()">
+        </app-groups-overview>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Phones">
+      <ng-template matTabContent>
+        <app-phones-overview
+          [phones]="phones$ | async"
+          (initialised)="onPhonesInitialised()"
+          (destroyed)="onPhonesDestroyed()">
+        </app-phones-overview>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</div>

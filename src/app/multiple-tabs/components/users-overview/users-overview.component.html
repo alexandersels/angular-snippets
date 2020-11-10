@@ -1,0 +1,8 @@
+<div class="container">
+  <app-users-table *ngIf="users"
+                   [users]="users">
+  </app-users-table>
+  <div class="spinner" *ngIf="!users">
+    <mat-spinner></mat-spinner>
+  </div>
+</div>

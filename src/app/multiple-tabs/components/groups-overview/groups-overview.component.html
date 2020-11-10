@@ -1,0 +1,8 @@
+<div class="container">
+  <app-groups-table *ngIf="groups"
+                    [groups]="groups">
+  </app-groups-table>
+  <div class="spinner" *ngIf="!groups">
+    <mat-spinner></mat-spinner>
+  </div>
+</div>
