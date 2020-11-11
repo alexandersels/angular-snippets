@@ -9,16 +9,26 @@ import { environment } from '../environments/environment';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreModule } from '@ngrx/store';
 import { appReducer } from './store/app.reducer';
+import { SmartFormComponentPageComponent } from './smart-form-components/page/smart-form-component-page.component';
+import { SmartComponentFormComponent } from './smart-form-components/components/smart-component-form/smart-component-form.component';
+import { SmartLoadAllDropdownComponent } from './smart-form-components/components/smart-load-all-dropdown/smart-load-all-dropdown.component';
+import { SmartFilterDropdownComponent } from './smart-form-components/components/smart-filter-dropdown/smart-filter-dropdown.component';
+import { SmartFormComponentsModule } from './smart-form-components/smart-form-components.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SmartFormComponentPageComponent,
+    SmartComponentFormComponent,
+    SmartLoadAllDropdownComponent,
+    SmartFilterDropdownComponent
   ],
   imports: [
-    MultipleTabsModule,
     AppRoutingModule,
-    SharedModule,
     BrowserAnimationsModule,
+    MultipleTabsModule,
+    SmartFormComponentsModule,
+    SharedModule,
     StoreModule.forRoot(appReducer),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
