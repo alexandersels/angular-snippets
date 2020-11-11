@@ -66,6 +66,7 @@ export class SmartFilterDropdownComponent implements OnInit {
       });
     }
     this.onSelected.emit(event);
+    console.log('load on the fly event fired!');
   }
 
   displayFn(phone: Phone):
