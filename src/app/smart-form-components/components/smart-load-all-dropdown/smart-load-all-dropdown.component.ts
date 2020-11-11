@@ -104,7 +104,7 @@ export class SmartLoadAllDropdownComponent implements OnInit, OnDestroy {
     this.isLoading = false;
 
     // Enable phone control
-    this.phoneControl.enable();
+    this.phoneControl.enable({emitEvent: false});
 
     // If initial value if present, set it
     if (this.initialValue) {

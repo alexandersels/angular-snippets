@@ -1,1 +1,18 @@
-<p>smart-filter-dropdown works!</p>
+<div class="row">
+  <form [formGroup]="form">
+    <mat-form-field class="example-full-width">
+      <input type="text"
+             placeholder="Selecteer een nummer"
+             aria-label="Number"
+             matInput
+             [formControl]="phoneControl"
+             [matAutocomplete]="auto">
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" [displayWith]="displayFn">
+        <mat-option *ngFor="let phone of filteredPhones$ | async" [value]="phone">
+          {{phone.number}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+</div>
