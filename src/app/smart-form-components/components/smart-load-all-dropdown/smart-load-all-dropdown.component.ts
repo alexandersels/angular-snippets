@@ -89,7 +89,6 @@ export class SmartLoadAllDropdownComponent implements OnInit, OnDestroy {
       });
     }
     this.onSelected.emit(event);
-    console.log('load up front event fired!');
   }
 
   mapToLabels(phones: Phone[]): string[] {

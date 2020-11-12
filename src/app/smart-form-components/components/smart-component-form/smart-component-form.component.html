@@ -1,2 +1,8 @@
-<app-smart-filter-dropdown [initialValue]="'5'"></app-smart-filter-dropdown>
-<app-smart-load-all-dropdown [initialValue]="'0'"></app-smart-load-all-dropdown>
+<app-smart-filter-dropdown
+  [initialValue]="initialValue?.onTheFlyPhone"
+  (onSelected)="onTheFlyChanged($event)">
+</app-smart-filter-dropdown>
+<app-smart-load-all-dropdown
+  [initialValue]="initialValue?.upFrontPhone"
+  (onSelected)="upFrontChanged($event)">
+</app-smart-load-all-dropdown>
